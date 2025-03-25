@@ -1,37 +1,68 @@
-// Smooth scroll to the About section when the Learn More button is clicked
-document.querySelector('.cta-btn').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector('#about').scrollIntoView({
-        behavior: 'smooth'
+
+  // Smooth scroll to the About section when the Learn More button is clicked
+  const ctaBtn = document.querySelector('.cta-btn');
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const aboutSection = document.querySelector('#about');
+      if (aboutSection) {
+        aboutSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     });
-});
+  }
 
-// Basic form submission with a simple message
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Message Sent! I'll get back to you soon.");
-});
+  // Basic form submission with a simple message and reset form
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Message Sent! I'll get back to you soon.");
 
-// Hamburger menu toggle functionality
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navBar = document.querySelector('.navbar-nav');
-const cancelBtn = document.querySelector('.cancel-btn');
+      // Reset the form after submission
+      event.target.reset();
+    });
+  }
 
-// Open and close the hamburger menu
-hamburgerMenu.addEventListener('click', () => {
-    navBar.classList.toggle('active');
-});
+  // Get all nav links
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (navLinks.length > 0) {
+    // Add event listener for click on each nav link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Remove active class from all links
+        navLinks.forEach(link => link.parentElement.classList.remove('active'));
 
-// Close the menu when the cancel button is clicked
-cancelBtn.addEventListener('click', () => {
-    navBar.classList.remove('active');
-});
+        // Add active class to the clicked link
+        this.parentElement.classList.add('active');
+      });
+    });
+  }
 
-// Project modal open and close functions
-function openModal(projectId) {
-    document.getElementById('projectModal' + projectId).style.display = 'block';
-}
+  // Get the navbar toggler (hamburger menu)
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.getElementById('navbarNav');
+  
+  if (navbarToggler && navbarCollapse) {
+    // Toggle active class on navbar collapse when hamburger menu is clicked
+    navbarToggler.addEventListener('click', function() {
+      navbarCollapse.classList.toggle('active');
+    });
+  }
 
-function closeModal(projectId) {
-    document.getElementById('projectModal' + projectId).style.display = 'none';
-}
+  // Project modal open and close functions
+  function openModal(projectId) {
+    const projectModal = document.getElementById('projectModal' + projectId);
+    if (projectModal) {
+      projectModal.style.display = 'block';
+    }
+  }
+
+  function closeModal(projectId) {
+    const projectModal = document.getElementById('projectModal' + projectId);
+    if (projectModal) {
+      projectModal.style.display = 'none';
+    }
+  }
+

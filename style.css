@@ -22,145 +22,236 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #4070f4;
 }
-/* navbar styling */
-nav{
-  position: fixed;
-  width: 100%;
-  padding: 20px 0;
-  z-index: 998;
-  transition: all 0.3s ease;
-  font-family: 'Ubuntu', sans-serif;
-}
-nav.sticky{
-  background: #4070f4;
-  padding: 13px 0;
-}
-nav .navbar{
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-nav .navbar .logo a{
-  font-weight: 500;
-  font-size: 35px;
-  color: #4070f4;
-}
-nav.sticky .navbar .logo a{
-  color: #fff;
-}
-nav .navbar .menu{
-  display: flex;
-  position: relative;
-}
-nav .navbar .menu li{
-  list-style: none;
-  margin: 0 8px;
-}
-.navbar .menu a{
-  font-size: 18px;
-  font-weight: 500;
-  color: #0E2431;
-  padding: 6px 0;
-  transition: all 0.4s ease;
-}
-.navbar .menu a:hover{
-  color: #4070f4;
-}
-nav.sticky .menu a{
-  color: #FFF;
-}
-nav.sticky .menu a:hover{
-  color: #0E2431;
-}
-.navbar .media-icons a{
-  color: #4070f4;
-  font-size: 18px;
-  margin: 0 6px;
-}
-nav.sticky .media-icons a{
-  color: #FFF;
-}
-/* Side Navigation Menu Button CSS */
-nav .menu-btn,
-.navbar .menu .cancel-btn{
-  position: absolute;
-  color: #fff;
-  right: 30px;
-  top: 20px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: none;
-}
-nav .menu-btn{
-  color: #4070f4;
-}
-nav.sticky .menu-btn{
-  color: #FFF;
-}
-.navbar .menu .menu-btn{
-  color: #fff;
-}
-/* home section styling */
-.home{
-  height: 100vh;
-  width: 100%;
-  background: url("images/background.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: 'Ubuntu', sans-serif;
-}
-.home .home-content{
-  width: 90%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.home .text-one{
-  font-size: 25px;
-  color: #0E2431;
-}
-.home .text-two{
-  color: #0E2431;
-  font-size: 75px;
-  font-weight: 600;
-  margin-left: -3px;
-}
-.home .text-three{
-  font-size: 40px;
-  margin: 5px 0;
-  color: #4070f4;
-}
-.home .text-four{
-  font-size: 23px;
-  margin: 5px 0;
-  color: #0E2431;
-}
-.home .button{
-  margin: 14px 0;
-}
-.home .button button{
-  outline: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 25px;
-  font-weight: 400;
-  background: #4070f4;
-  color: #fff;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
-.home .button button:hover{
-  border-color: #4070f4;
-  background-color: #fff;
-  color: #4070f4;
-}
+/* Navbar Styling */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  nav.sticky {
+    background-color: #4070f4;
+    padding: 10px 0;
+  }
+  
+  nav .navbar .logo a {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #4070f4;
+    text-transform: uppercase;
+  }
+  
+  nav.sticky .navbar .logo a {
+    color: #fff;
+  }
+  
+  nav .navbar .navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav .navbar .navbar-nav .nav-link {
+    font-size: 18px;
+    color: #333;
+    padding: 6px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  nav .navbar .navbar-nav .nav-link:hover {
+    color: #4070f4;
+    border-bottom: 2px solid #4070f4;
+  }
+  
+  /* Hamburger Menu - Toggle Button */
+  .navbar-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .navbar-toggler .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #4070f4;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-toggler.collapsed .navbar-toggler-icon {
+    background-color: transparent;
+  }
+  
+  .navbar-toggler.collapsed .navbar-toggler-icon::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .navbar-toggler.collapsed .navbar-toggler-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 991px) {
+    .navbar .navbar-nav {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navbar .navbar-nav.active {
+      display: flex;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    nav .media-icons {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  
+ /* Home Section Styling */
+.home {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Light background */
+    padding: 0 20px;
+  }
+  
+  /* Home Content Styling */
+  .home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Title Styling */
+  .home .text h1 {
+    font-size: 3rem; /* Large font size */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .home .text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .home .button button {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border: none;
+    background-color: #4070f4;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .home .button button:hover {
+    background-color: #365eab;
+    transform: translateY(-2px);
+  }
+  
+  /* Image Styling */
+  .home .left img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .home .left img:hover {
+    transform: scale(1.1); /* Hover effect to enlarge the image slightly */
+  }
+  
+  /* Mobile Responsiveness for Home Section */
+@media (max-width: 768px) {
+    /* Adjust the Home Section to make sure everything fits well on smaller screens */
+    .home {
+      height: auto; /* Allow the height to adjust based on content */
+      padding: 20px 20px; /* Adjust padding for mobile screens */
+      text-align: center; /* Center the text for better alignment */
+    }
+    
+    /* Adjust the Hero Title (h1) for better readability on smaller screens */
+    .home .text h1 {
+      font-size: 2.5rem; /* Slightly smaller heading */
+      line-height: 1.2; /* Make line-height tighter for better spacing */
+    }
+  
+    /* Adjust the Hero Description (p) */
+    .home .text p {
+      font-size: 1.1rem;
+      margin-top: 10px; /* Space between description and button */
+      line-height: 1.5; /* Improve text readability */
+    }
+  
+    /* Adjust Button Size and Padding for better tap target */
+    .home .button button {
+      font-size: 1rem;
+      padding: 12px 30px; /* Increase button padding for better accessibility */
+      border-radius: 30px; /* Maintain rounded button shape */
+      margin-top: 10px; /* Space between text and button */
+    }
+  
+    /* Mobile-friendly Font Sizes for Hero Text */
+    .home .text-two {
+      font-size: 2.5rem; /* Adjust subtitle font size */
+    }
+  
+    .home .text-three {
+      font-size: 1.25rem; /* Adjust third line text size */
+    }
+  
+    /* Ensure the Button remains prominent and accessible */
+    .home .button button:hover {
+      background-color: #365eab;
+      transform: none; /* Remove hover transform for mobile to avoid janky animations */
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .home .text h1 {
+      font-size: 2rem; /* Smaller font size on very small screens */
+    }
+  
+    .home .text p {
+      font-size: 1rem;
+    }
+  
+    .home .button button {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  
+    /* Adjust Image Size */
+    .home .left img {
+      width: 70%; /* Resize image further for very small screens */
+    }
+  }
 /* About Section Styling */
 /* Those Elements Where We Have Apply Same CSS,
  I'm Selecting Directly 'Section Tag' and 'Class'  */
