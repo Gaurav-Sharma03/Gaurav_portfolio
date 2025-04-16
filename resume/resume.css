@@ -1,0 +1,107 @@
+/* Font & Reset */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Container styled like an A4 sheet */
+  .resume-container {
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+  }
+  header .subheading {
+    font-size: 16px;
+    color: #555;
+  }
+  .contact-info {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .contact-info span {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+  .contact-info a {
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  /* Section styling */
+  section {
+    margin-bottom: 25px;
+  }
+  section h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    color: #444;
+  }
+  section ul {
+    padding-left: 20px;
+  }
+  section li {
+    margin-bottom: 6px;
+  }
+  .job h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .date {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 8px;
+  }
+  
+  /* Button */
+  .download-btn-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  #downloadBtn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #downloadBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Hide download button when printing or generating PDF */
+  @media print {
+    .download-btn-container {
+      display: none;
+    }
+  }
+  
+  /* A4 paper size constraints */
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+  
