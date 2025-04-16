@@ -2,453 +2,473 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your Portfolio">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gaurav's Portfolio" />
     <title>Gaurav Portfolio</title>
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome (Latest Version) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Fontawesome CDN Link -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <!-- Move to up button -->
-    <div class="scroll-button">
-        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scroll to Top Button -->
+    <div class="position-fixed bottom-0 end-0 m-4 z-3">
+        <a href="#home" class="btn btn-primary rounded-circle">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  shadow-sm">
         <div class="container">
-            <!-- Logo Section -->
-            <div class="logo">
-                <a href="#" class="text-decoration-none">
-                    <h1 class="m-0 text-primary">Gaurav Portfolio <span class="text-dark font-italic">[Web
-                            Developer]</span></h1>
-                </a>
-            </div>
 
-            <!-- Hamburger Menu Button for Mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i> <!-- Font Awesome Hamburger Icon -->
+            <a class="navbar-brand fw-bold text-white text-primary" href="#"> <img src="Image/G.jpg">Gaurav</a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav   ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#explore">My Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 
-            <!-- Menu Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+
                 </ul>
             </div>
 
-            <!-- Social Media Icons -->
-            <div class="media-icons">
-                <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+            <!-- Social Icons -->
+            <div class="d-none d-lg-flex ms-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
-        <script>
-            // Select the hamburger menu icon and navbar links
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarNav = document.querySelector('.navbar .navbar-nav');
-
-            // Add an event listener to toggle the 'active' class
-            navbarToggler.addEventListener('click', function () {
-                navbarNav.classList.toggle('active'); // Toggle the 'active' class on the navbar
-            });
-        </script>
     </nav>
 
+    <!-- Home Section -->
+    <section id="home" class="py-5 bg-light">
+        <!-- Home Section -->
+        <section id="home" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
 
+                    <!-- Left Content -->
+                    <div class="col-md-6 text-center text-md-start">
+                        <h2> Hello There!</h2>
+                        <h1 class="display-4 fw-bold mb-3">Hi, I'm Gaurav</h1>
 
-
-    <!-- Home Section Start -->
-    <section class="home" id="home">
-        <div class="home-content container">
-            <div class="row align-items-center">
-                <!-- Hero Text Section -->
-                <div class="col-md-6 text-center text-md-start">
-                    <h1 class="display-4">Hi, I'm Gaurav</h1>
-                    <p class="lead">I'm a passionate web developer and designer.</p>
-                    <div class="button">
-                        <!-- Hire Me Button -->
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hireModal">Hire
-                            Me</button>
+                        <p class="lead fs-4" id="dynamic-lead">
+                            <span id="typed-text"></span><span id="cursor">|</span>
+                        </p>
+                        <button class="btn-hire">Hire Me</button>
+                        <a href="files/gaurav_cv.pdf" target="_blank" class="btn-hire">Download CV</a>
                     </div>
-                </div>
 
-                <!-- Image Section -->
-                <div class="col-md-6 text-center text-md-end">
-                    <img src="Image/devimg.svg" alt="Web Developer Image" class="img-fluid" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="hireModal" tabindex="-1" aria-labelledby="hireModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="hireModalLabel">Hire Process</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Hire Process Form -->
-                    <form id="hire-process-form">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="project-details" class="form-label">Project Details</label>
-                            <textarea class="form-control" id="project-details" rows="3"
-                                placeholder="Describe your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- About Section Start -->
-    <section class="about" id="about">
-        <div class="content">
-            <div class="title"><span>About Me</span></div>
-            <div class="about-details">
-                <div class="left">
-                    <img src="Image/Gauravimg.jpg" alt="gaurav_image" />
-                </div>
-                <div class="right">
-                    <div class="topic">Web Designing Is My Passion</div>
-                    <p>Hello! I am currently pursuing a Master's in Computer Applications (MCA) from SPU Mandi. With a
-                        strong foundation in computer science, I am passionate about leveraging technology to solve
-                        real-world problems.</p>
-                    <div class="button">
-                        <!-- Link the CV file and display it in the browser when clicked -->
-                        <a href="files/gaurav_cv.pdf" target="_blank">
-                            <button>Download CV</button>
-                        </a>
+                    <!-- Right Image -->
+                    <div class="col-md-6 text-center mt-4 mt-md-0">
+                        <img src="Image/Gauravimg.jpg" alt="Web Developer" class="img-fluid rounded shadow"
+                            style="max-height: 400px;" />
                     </div>
+
                 </div>
+                
             </div>
-        </div>
+        </section>
+
+       
+
+        <!-- Typing Animation Script -->
+        <script>
+            const leadTexts = [
+                "I'm a passionate web developer and designer.",
+                "I build responsive and modern websites.",
+                "Creating beautiful UIs is my thing.",
+                "Clean code and creativity drive my work.",
+                "Let's bring your ideas to life!"
+            ];
+
+            let textIndex = 0;
+            let charIndex = 0;
+            const typedText = document.getElementById("typed-text");
+
+            function typeText() {
+                const currentText = leadTexts[textIndex];
+                if (charIndex < currentText.length) {
+                    typedText.textContent += currentText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, 60); // typing speed
+                } else {
+                    setTimeout(() => {
+                        eraseText();
+                    }, 2000); // pause before erase
+                }
+            }
+
+            function eraseText() {
+                const currentText = leadTexts[textIndex];
+                if (charIndex > 0) {
+                    typedText.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(eraseText, 30); // erase speed
+                } else {
+                    textIndex = (textIndex + 1) % leadTexts.length;
+                    setTimeout(typeText, 500);
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                typeText();
+            });
+        </script>
+
 
     </section>
 
+<!--========service section======-->
 
-
-    <!-- Education Section -->
-    <section id="education" class="section-padding py-5">
-        <div class="container">
-            <div class="title"><span>Education</span></div>
-            <div class="row">
-                <!-- Sardar Patel University Section -->
-                <div class="col-md-6">
-                    <div class="card">
-                        <img src="./Image/spu.jpg" alt="Sardar Patel University" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Master in Computer Science</h5>
-                            <p class="card-text">Sardar Patel University (Pursuing)</p>
-                            <button class="btn btn-primary" id="learnMoreSPU">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Himachal Pradesh University Section -->
-                <div class="col-md-6">
-                    <div class="card">
-                        <img src="./Image/hpu.jpg" alt="Himachal Pradesh University" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Bachelor's in Computer Science</h5>
-                            <p class="card-text">Himachal Pradesh University, 2016 - 2019</p>
-                            <button class="btn btn-primary" id="learnMoreHPU">Learn More</button>
-                        </div>
-                    </div>
-                </div>
+<!-- Services Section -->
+<section id="services" class="service-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">My Services</h2>
+        <p class="section-subtitle">Here’s what I can do for you.</p>
+      </div>
+  
+      <div class="row gy-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+          <div class="service-card text-center p-4">
+            <div class="service-icon mb-3">
+              <i class="fas fa-code fa-3x"></i>
             </div>
+            <h5 class="service-title">Web Development</h5>
+            <p class="service-description">Custom websites using HTML, CSS, JavaScript, and frameworks like React.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- Modal for Sardar Patel University Details -->
-    <div class="modal" id="spuModal" tabindex="-1" aria-labelledby="spuModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="spuModalLabel">Sardar Patel University Mandi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Jurisdiction:</strong> Chamba, Kangra, Spiti, Kullu, Mandi, and Lahaul</p>
-                    <p><strong>Affiliations:</strong> 119 colleges and institutions</p>
-                    <p><strong>Approvals:</strong> UGC</p>
-                    <p><strong>Courses:</strong> 14 Degrees and 29 Courses</p>
-                    <p><strong>Established:</strong> 2022</p>
-                    <p>Sardar Patel University Mandi offers a diverse range of undergraduate, postgraduate, and research
-                        programs.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+  
+        <!-- Service 2 -->
+        <div class="col-md-4">
+          <div class="service-card text-center p-4">
+            <div class="service-icon mb-3">
+              <i class="fas fa-pencil-ruler fa-3x"></i>
             </div>
+            <h5 class="service-title">UI/UX Design</h5>
+            <p class="service-description">Designing clean and user-friendly interfaces with Figma and Adobe XD.</p>
+          </div>
         </div>
+  
+        <!-- Service 3 -->
+        <div class="col-md-4">
+          <div class="service-card text-center p-4">
+            <div class="service-icon mb-3">
+              <i class="fas fa-mobile-alt fa-3x"></i>
+            </div>
+            <h5 class="service-title">Responsive Design</h5>
+            <p class="service-description">Ensuring your website looks great on all devices — phones, tablets, desktops.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  
 
-    <!-- Modal for Himachal Pradesh University Details -->
-    <div class="modal" id="hpuModal" tabindex="-1" aria-labelledby="hpuModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="hpuModalLabel">Himachal Pradesh University</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Established:</strong> 22nd July, 1970</p>
-                    <p><strong>Jurisdiction:</strong> Urban, rural, and tribal areas of Himachal Pradesh</p>
-                    <p><strong>Key Information:</strong> The university was established by an Act of the Legislative
-                        Assembly of Himachal Pradesh as a response to the educational needs of the state, offering both
-                        formal and distant modes of education. It is the only multi-faculty residential and affiliating
-                        university in the state.</p>
-                    <p><strong>Key Fact:</strong> The university serves students across urban, rural, and tribal areas,
-                        providing higher education through various programs.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+<!-- Explore Section -->
+<section id="explore" class="explore-section py-5">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">Explore My Work</h2>
+      <p class="section-subtitle mb-5">Dive into what I do — from projects to skills and professional experience.</p>
+  
+      <!-- Navigation Buttons -->
+      <div class="btn-group-custom d-flex flex-wrap justify-content-center gap-4 mb-5">
+        <a href="#projects" class="btn-explore">My Projects</a>
+        <a href="#skills" class="btn-explore">My Skills</a>
+        <a href="#experience" class="btn-explore">My Experience</a>
+        <a href="#certifications" class="btn-explore">Certifications</a>
+        <a href="#qualifications" class="btn-explore">Qualifications</a>  
     </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="content-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Here are a few of my recent works.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-4">
+          <div class="project-card p-4 h-100">
+            <img src="Image/hpexplore.png" class="card-img-top" alt="HP Explore">
+            <div class="card-body">
+              <h5 class="project-title">Explore Himachal Pradesh</h5>
+              <p class="project-description">A tourism website showcasing attractions and culture of Himachal Pradesh.</p>
+              <a href="https://hpexplore.netlify.app" target="_blank" class="project-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="col-md-4">
+          <div class="project-card p-4 h-100">
+            <img src="path_to_image.jpg" class="card-img-top" alt="Jewellery Shop">
+            <div class="card-body">
+              <h5 class="project-title">Jewellery Shop</h5>
+              <p class="project-description">An e-commerce platform for jewelry with payment integration.</p>
+              <a href="https://myjewellers.netlify.app" target="_blank" class="project-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="col-md-4">
+          <div class="project-card p-4 h-100">
+            <img src="path_to_image.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="project-title">Project Title</h5>
+              <p class="project-description">A brief description of the project, its features, and functionalities.</p>
+              <a href="https://yourprojectlink.com" target="_blank" class="project-btn">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills Section -->
+  <section id="skills" class="content-section py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-3"><i class="fab fa-html5 fa-3x mb-2 text-danger"></i><h5>HTML</h5></div>
+        <div class="col-md-3"><i class="fab fa-css3-alt fa-3x mb-2 text-primary"></i><h5>CSS</h5></div>
+        <div class="col-md-3"><i class="fab fa-js-square fa-3x mb-2 text-warning"></i><h5>JavaScript</h5></div>
+        <div class="col-md-3"><i class="fab fa-react fa-3x mb-2 text-info"></i><h5>React</h5></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience Section -->
+  <section id="experience" class="content-section py-5 ">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">My professional journey through roles, responsibilities, and growth.</p>
+      </div>
+      <div class="row gy-4">
+        <!-- Experience 1 -->
+        <div class="col-md-6">
+          <div class="experience-card p-4 h-100">
+            <h5 class="exp-title"><i class="fas fa-cogs me-2 text-success"></i>Technical Lead – AI Robotics Club</h5>
+            <p class="exp-date">Oct 2024 – Present</p>
+            <ul>
+              <li>Leading projects and coordinating hardware & software integration.</li>
+              <li>Overseeing timelines and mentoring junior developers.</li>
+              <li>Websites: HP Health & Welfare, Room_Finder, Jewellery Shop.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 2 -->
+        <div class="col-md-6">
+          <div class="experience-card p-4 h-100">
+            <h5 class="exp-title"><i class="fas fa-map-marked-alt me-2 text-success"></i>Team Member – Indoor Navigation System</h5>
+            <p class="exp-date">Oct 2024 – Jan 2025</p>
+            <ul>
+              <li>Designed and tested navigation features for campuses.</li>
+              <li>Supported client coordination and technical documentation.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 3 -->
+        <div class="col-md-6">
+          <div class="experience-card p-4 h-100">
+            <h5 class="exp-title"><i class="fas fa-database me-2 text-success"></i>Clerk Cum Data Operator – M/S Rao Gas Service</h5>
+            <p class="exp-date">2 Years, 3 Months</p>
+            <ul>
+              <li>Managed customer data and sales records.</li>
+              <li>Maintained showroom/store inventory entries.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 4 -->
+        <div class="col-md-6">
+          <div class="experience-card p-4 h-100">
+            <h5 class="exp-title"><i class="fas fa-clipboard-list me-2 text-success"></i>Clerk Cum Data Operator – Mandav Indane Gas Service</h5>
+            <p class="exp-date">1 Year, 10 Months</p>
+            <ul>
+              <li>Inventory tracking and performance report generation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certification Section -->
+  <section id="certifications" class="content-section py-5 ">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">My Certifications</h2>
+        <p class="section-subtitle">A showcase of my verified knowledge and achievements.</p>
+      </div>
+      <div class="row gy-4">
+        <!-- Certification 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cert-card p-4 h-100">
+            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>Data Analytics</h5>
+            <p class="cert-org">Simplilearn|SkillUp</p>
+            <p class="cert-date">Issued: March 2025</p>
+            <p class="cert-date">Certificate Code: 818277</p>
+            <a href="#" class="cert-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+        <!-- Certification 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cert-card p-4 h-100">
+            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>Cyber Security</h5>
+            <p class="cert-org">Simplilearn|SkillUp</p>
+            <p class="cert-date">Issued: Feb 2025</p>
+            <a href="#" class="cert-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+        <!-- Certification 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cert-card p-4 h-100">
+            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>SQL </h5>
+            <p class="cert-org">Simplilearn|SkillUp</p>
+            <p class="cert-date">Issued: Mar 2024</p>
+            <a href="#" class="cert-link" target="_blank">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Modal Script -->
-    <script>
-        // Event listener to open the modal for Sardar Patel University when "Learn More" is clicked
-        document.getElementById('learnMoreSPU').addEventListener('click', function () {
-            var myModal = new bootstrap.Modal(document.getElementById('spuModal'));
-            myModal.show();
+
+  <!-- Qualification Section -->
+<section id="qualifications" class="content-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">My Qualifications</h2>
+        <p class="section-subtitle">Academic journey and educational background.</p>
+      </div>
+  
+      <div class="row gy-4">
+        <!-- Qualification 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cert-card p-4 h-100">
+            <h5 class="cert-title"><i class="fas fa-graduation-cap me-2 text-success"></i>Master of Computer Applications (MCA)</h5>
+            <p class="cert-org">SPU Mandi (H.P.)</p>
+            <p class="cert-date">2024 – Present</p>
+            <p class="cert-date"></p>
+          </div>
+        </div>
+  
+        <!-- Qualification 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="cert-card p-4 h-100">
+            <h5 class="cert-title"><i class="fas fa-graduation-cap me-2 text-success"></i>Bachelor of Computer Applications (BCA)</h5>
+            <p class="cert-org">HPU (ICDEOL)</p>
+            <p class="cert-date">2016 – 2019</p>
+            <p class="cert-date">Final CGPA: 7.46</p>
+          </div>
+        </div>       
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- JavaScript: Show Selected Section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll('.btn-explore');
+      const sections = document.querySelectorAll('.content-section');
+  
+      // Hide all sections initially
+      sections.forEach(section => section.style.display = "none");
+  
+      // Add click event to each button
+      buttons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetID = this.getAttribute('href').substring(1);
+  
+          // Hide all sections
+          sections.forEach(section => section.style.display = "none");
+  
+          // Show the selected section
+          const targetSection = document.getElementById(targetID);
+          if (targetSection) {
+            targetSection.style.display = "block";
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
         });
+      });
+    });
+  </script>
 
-        // Event listener to open the modal for Himachal Pradesh University when "Learn More" is clicked
-        document.getElementById('learnMoreHPU').addEventListener('click', function () {
-            var myModal = new bootstrap.Modal(document.getElementById('hpuModal'));
-            myModal.show();
-        });
-    </script>
-
-    <!-- Projects Section -->
-    <section id="projects" class="bg-light py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <div class="title"><span>Project's</span></div>
-                <p class="lead">Here are a few of the projects I have worked on recently.</p>
-            </div>
-            <!-- hpexplore Site -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="Image/hpexplore.png" class="card-img-top" alt="Explore Himachal Pradesh">
-                    <div class="card-body">
-                        <h5 class="card-title">Explore Himachal Pradesh</h5>
-                        <p class="card-text">A platform that helps people find different vication Places and culture
-                            about H.P. it help people to explore Himachal Pradesh.</p>
-                        <a href="https://hpexplore.netlify.app" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Jewellery Shop Site -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="path_to_image.jpg" class="card-img-top" alt="Jewellery Shop">
-                    <div class="card-body">
-                        <h5 class="card-title">Jewellery Shop</h5>
-                        <p class="card-text">An e-commerce website for a jewellery shop where users can browse,
-                            filter,
-                            and purchase items online. Integrated with payment gateways for smooth transactions.</p>
-                        <a href="https://myjewellers.netlify.app" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-               
-              
-                 <!-- Room Finder Project -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="Room Finder">
-                        <div class="card-body">
-                            <h5 class="card-title">Room Finder</h5>
-                            <p class="card-text">A platform that helps people find rooms to rent in the city. Users can
-                                search
-                                for available rooms based on location, price, and amenities.</p>
-                            <a href="https://link_to_project" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CMO Mandi Project -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="path_to_image.jpg" class="card-img-top" alt="CMO Mandi">
-                        <div class="card-body">
-                            <h5 class="card-title">CMO Mandi</h5>
-                            <p class="card-text">A directory of all departments, BDO, and SHO data for CMO Mandi. It
-                                allows
-                                citizens to easily access public services and information.</p>
-                            <a href="https://link_to_project" class="btn btn-primary">View Project</a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="about-title">About Me</h2>
+      </div>
+      <div class="row align-items-center">
+        <!-- Left Side: Image -->
+        <div class="col-md-5 mb-4 mb-md-0 text-center">
+          <img src="Image/Gauravimg.jpg" alt="Gaurav" class="img-fluid rounded shadow" style="max-height: 300px;" />
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding py-5 bg-light">
-        <div class="container">
-            <div class="title"><span>Skills</span></div>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fab fa-html5 fa-3x mb-3"></i>
-                        <h5>HTML</h5>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fab fa-css3-alt fa-3x mb-3"></i>
-                        <h5>CSS</h5>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fab fa-js-square fa-3x mb-3"></i>
-                        <h5>JavaScript</h5>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="text-center">
-                        <i class="fab fa-react fa-3x mb-3"></i>
-                        <h5>React</h5>
-                    </div>
-                </div>
-            </div>
+  
+        <!-- Right Side: Text & Contact Info -->
+        <div class="col-md-7">
+          <h4 class="about-subtitle">Web Designing Is My Passion</h4>
+          <p class="about-text mb-4">
+            I'm currently pursuing an MCA at SPU Mandi and love solving real-world problems using web technologies. I'm always open to freelance and collaborative opportunities.
+          </p>
+  
+          <!-- Contact Info -->
+          <ul class="list-unstyled mb-4">            
+            <li><i class="fas fa-envelope me-2 text-danger"></i> <strong>Email:</strong> gauravspumca@gmail.com</li>
+            <li><i class="fab fa-github me-2 text-dark"></i> <strong>GitHub:</strong> <a href="https://github.com/Gaurav-Sharma03" target="_blank">Gaurav-Sharma03</a></li>
+            <a href="files/gaurav_cv.pdf" target="_blank" class="btn-hire">Download CV</a>  
+        </ul>  
+         
+          
         </div>
-    </section>
+      </div>
+    </div>
+  </section> 
 
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding py-5">
-        <div class="container">
-            <div class="title"><span>Professional Experience</span></div>
-            <h2 class="text-center mb-4"></h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4><i class="fas fa-cogs"></i> Technical Lead - AI Robotics Club, SPU Mandi</h4>
-                    <p><strong>Oct 2024 - Present</strong></p>
-                    <ul>
-                        <li>Led website development and maintenance.</li>
-                        <li>Mentored junior developers and ensured cross-device compatibility.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h4><i class="fas fa-laptop"></i> Team Member - Indoor Navigation System</h4>
-                    <p><strong>Oct 2024 - Jan 2025</strong></p>
-                    <ul>
-                        <li>Collaborated on the development of a campus navigation system.</li>
-                        <li>Debugged and ensured seamless functionality.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding py-5 bg-light">
-        <div class="container">
-            <!-- Title for Contact Section -->
-            <div class="text-center mb-5">
-                <div class="title"><span>Contact Me</span></div>
-                <p class="lead">I’d love to hear from you! Feel free to reach out for collaborations or inquiries.</p>
-            </div>
-
-            <!-- Contact Form -->
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8 col-12">
-                    <form id="contact-form" action="submit_form.php" method="POST">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Your Email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" placeholder="Your Message" name="message" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100"><i class="fas fa-paper-plane"></i>
-                            Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>&copy; 2025 Gaurav. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank" class="text-white mx-3"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" class="text-white mx-3"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="text-white mx-3"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com" target="_blank" class="text-white mx-3"><i class="fab fa-github"></i></a>
-            </div>
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        <p>&copy; 2025 Gaurav. All rights reserved.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://facebook.com" class="text-white"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" class="text-white"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com" class="text-white"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

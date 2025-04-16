@@ -13,17 +13,19 @@
     });
   }
 
-  // Basic form submission with a simple message and reset form
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Message Sent! I'll get back to you soon.");
+ // Basic form submission with a simple message and reset form
+const contactForm = document.getElementById("hire-me-form"); // Ensure the ID matches the form ID
+if (contactForm) {
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
 
-      // Reset the form after submission
-      event.target.reset();
-    });
-  }
+    alert("Message Sent! I'll get back to you soon."); // Display a success message
+
+    // Reset the form after submission
+    event.target.reset();
+  });
+}
+
 
   // Get all nav links
   const navLinks = document.querySelectorAll('.nav-link');
