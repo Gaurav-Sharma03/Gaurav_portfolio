@@ -1,474 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gaurav's Portfolio" />
-    <title>Gaurav Portfolio</title>
+    <meta name="description" content="Gaurav | Web Developer Portfolio" />
+    <title>Gaurav | Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    <!-- Font Awesome (Latest Version) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- Scroll to Top Button -->
-    <div class="position-fixed bottom-0 end-0 m-4 z-3">
-        <a href="#home" class="btn btn-primary rounded-circle">
-            <i class="fas fa-arrow-up"></i>
-        </a>
+<!-- ===== NAVIGATION ===== -->
+<header class="navbar">
+    <div class="nav-container">
+        <div class="logo">Gaurav</div>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </nav>
     </div>
+</header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg  shadow-sm">
-        <div class="container">
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Gaurav</span></h1>
+            <h2>Web Developer & UI Designer</h2>
+            <p>
+                I design and develop secure, scalable, and user-centric web
+                applications with a strong focus on performance and UX.
+            </p>
 
-            <a class="navbar-brand fw-bold text-white text-primary" href="#"> <img src="Image/G.jpg">Gaurav</a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarNav">
-                <ul class="navbar-nav   ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#explore">My Work</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-
-
-                </ul>
-            </div>
-
-            <!-- Social Icons -->
-            <div class="d-none d-lg-flex ms-3">
-                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
             </div>
         </div>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="py-5 bg-light">
-        <!-- Home Section -->
-        <section id="home" class="py-5 bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <!-- Left Content -->
-                    <div class="col-md-6 text-center text-md-start">
-                        <h2> Hello There!</h2>
-                        <h1 class="display-4 fw-bold mb-3">Hi, I'm Gaurav</h1>
-
-                        <p class="lead fs-4" id="dynamic-lead">
-                            <span id="typed-text"></span><span id="cursor">|</span>
-                        </p>
-                        <button class="btn-hire">Hire Me</button>
-                        <a href="resume/resume.html" target="_blank" class="btn-hire">Download CV</a>
-                    </div>
-
-                    <!-- Right Image -->
-                    <div class="col-md-6 text-center mt-4 mt-md-0">
-                        <img src="Image/Gauravimg.jpg" alt="Web Developer" class="img-fluid rounded shadow"
-                            style="max-height: 400px;" />
-                    </div>
-
-                </div>
-                
-            </div>
-        </section>
-
-       
-
-        <!-- Typing Animation Script -->
-        <script>
-            const leadTexts = [
-                "I'm a passionate web developer and designer.",
-                "I build responsive and modern websites.",
-                "Creating beautiful UIs is my thing.",
-                "Clean code and creativity drive my work.",
-                "Let's bring your ideas to life!"
-            ];
-
-            let textIndex = 0;
-            let charIndex = 0;
-            const typedText = document.getElementById("typed-text");
-
-            function typeText() {
-                const currentText = leadTexts[textIndex];
-                if (charIndex < currentText.length) {
-                    typedText.textContent += currentText.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeText, 60); // typing speed
-                } else {
-                    setTimeout(() => {
-                        eraseText();
-                    }, 2000); // pause before erase
-                }
-            }
-
-            function eraseText() {
-                const currentText = leadTexts[textIndex];
-                if (charIndex > 0) {
-                    typedText.textContent = currentText.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(eraseText, 30); // erase speed
-                } else {
-                    textIndex = (textIndex + 1) % leadTexts.length;
-                    setTimeout(typeText, 500);
-                }
-            }
-
-            document.addEventListener("DOMContentLoaded", () => {
-                typeText();
-            });
-        </script>
-
-
-    </section>
-
-<!--========service section======-->
-
-<!-- Services Section -->
-<section id="services" class="service-section py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">My Services</h2>
-        <p class="section-subtitle">Here’s what I can do for you.</p>
-      </div>
-  
-      <div class="row gy-4">
-        <!-- Service 1 -->
-        <div class="col-md-4">
-          <div class="service-card text-center p-4">
-            <div class="service-icon mb-3">
-              <i class="fas fa-code fa-3x"></i>
-            </div>
-            <h5 class="service-title">Web Development</h5>
-            <p class="service-description">Custom websites using HTML, CSS, JavaScript, and frameworks like React.</p>
-          </div>
-        </div>
-  
-        <!-- Service 2 -->
-        <div class="col-md-4">
-          <div class="service-card text-center p-4">
-            <div class="service-icon mb-3">
-              <i class="fas fa-pencil-ruler fa-3x"></i>
-            </div>
-            <h5 class="service-title">UI/UX Design</h5>
-            <p class="service-description">Designing clean and user-friendly interfaces with Figma and Adobe XD.</p>
-          </div>
-        </div>
-  
-        <!-- Service 3 -->
-        <div class="col-md-4">
-          <div class="service-card text-center p-4">
-            <div class="service-icon mb-3">
-              <i class="fas fa-mobile-alt fa-3x"></i>
-            </div>
-            <h5 class="service-title">Responsive Design</h5>
-            <p class="service-description">Ensuring your website looks great on all devices — phones, tablets, desktops.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-  
+</section>
 
-<!-- Explore Section -->
-<section id="explore" class="explore-section py-5">
-    <div class="container text-center">
-      <h2 class="section-title mb-4">Explore My Work</h2>
-      <p class="section-subtitle mb-5">Dive into what I do — from projects to skills and professional experience.</p>
-  
-      <!-- Navigation Buttons -->
-      <div class="btn-group-custom d-flex flex-wrap justify-content-center gap-4 mb-5">
-        <a href="#projects" class="btn-explore">My Projects</a>
-        <a href="#skills" class="btn-explore">My Skills</a>
-        <a href="#experience" class="btn-explore">My Experience</a>
-        <a href="#certifications" class="btn-explore">Certifications</a>
-        <a href="#qualifications" class="btn-explore">Qualifications</a>  
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+    <div class="section-header">
+        <h2>About Me</h2>
+        <p>A brief introduction about who I am and what I do.</p>
     </div>
-    </div>
-  </section>
-  
-  <!-- Projects Section -->
-  <section id="projects" class="content-section py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Here are a few of my recent works.</p>
-      </div>
-      <div class="row g-4">
-        <!-- Project 1 -->
-        <div class="col-md-4">
-          <div class="project-card p-4 h-100">
-            <img src="Image/hpexplore.png" class="card-img-top" alt="HP Explore">
-            <div class="card-body">
-              <h5 class="project-title">Explore Himachal Pradesh</h5>
-              <p class="project-description">A tourism website showcasing attractions and culture of Himachal Pradesh.</p>
-              <a href="https://hpexplore.netlify.app" target="_blank" class="project-btn">View Project</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="col-md-4">
-          <div class="project-card p-4 h-100">
-            <img src="path_to_image.jpg" class="card-img-top" alt="Jewellery Shop">
-            <div class="card-body">
-              <h5 class="project-title">Jewellery Shop</h5>
-              <p class="project-description">An e-commerce platform for jewelry with payment integration.</p>
-              <a href="https://myjewellers.netlify.app" target="_blank" class="project-btn">View Project</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="col-md-4">
-          <div class="project-card p-4 h-100">
-            <img src="path_to_image.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="project-title">Project Title</h5>
-              <p class="project-description">A brief description of the project, its features, and functionalities.</p>
-              <a href="https://yourprojectlink.com" target="_blank" class="project-btn">View Project</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Skills Section -->
-  <section id="skills" class="content-section py-5">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2 class="section-title">Skills</h2>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-3"><i class="fab fa-html5 fa-3x mb-2 text-danger"></i><h5>HTML</h5></div>
-        <div class="col-md-3"><i class="fab fa-css3-alt fa-3x mb-2 text-primary"></i><h5>CSS</h5></div>
-        <div class="col-md-3"><i class="fab fa-js-square fa-3x mb-2 text-warning"></i><h5>JavaScript</h5></div>
-        <div class="col-md-3"><i class="fab fa-react fa-3x mb-2 text-info"></i><h5>React</h5></div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Experience Section -->
-  <section id="experience" class="content-section py-5 ">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">Work Experience</h2>
-        <p class="section-subtitle">My professional journey through roles, responsibilities, and growth.</p>
-      </div>
-      <div class="row gy-4">
-        <!-- Experience 1 -->
-        <div class="col-md-6">
-          <div class="experience-card p-4 h-100">
-            <h5 class="exp-title"><i class="fas fa-cogs me-2 text-success"></i>Technical Lead – AI Robotics Club</h5>
-            <p class="exp-date">Oct 2024 – Present</p>
-            <ul>
-              <li>Leading projects and coordinating hardware & software integration.</li>
-              <li>Overseeing timelines and mentoring junior developers.</li>
-              <li>Websites: HP Health & Welfare, Room_Finder, Jewellery Shop.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Experience 2 -->
-        <div class="col-md-6">
-          <div class="experience-card p-4 h-100">
-            <h5 class="exp-title"><i class="fas fa-map-marked-alt me-2 text-success"></i>Team Member – Indoor Navigation System</h5>
-            <p class="exp-date">Oct 2024 – Jan 2025</p>
-            <ul>
-              <li>Designed and tested navigation features for campuses.</li>
-              <li>Supported client coordination and technical documentation.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Experience 3 -->
-        <div class="col-md-6">
-          <div class="experience-card p-4 h-100">
-            <h5 class="exp-title"><i class="fas fa-database me-2 text-success"></i>Clerk Cum Data Operator – M/S Rao Gas Service</h5>
-            <p class="exp-date">2 Years, 3 Months</p>
-            <ul>
-              <li>Managed customer data and sales records.</li>
-              <li>Maintained showroom/store inventory entries.</li>
-            </ul>
-          </div>
-        </div>
-        <!-- Experience 4 -->
-        <div class="col-md-6">
-          <div class="experience-card p-4 h-100">
-            <h5 class="exp-title"><i class="fas fa-clipboard-list me-2 text-success"></i>Clerk Cum Data Operator – Mandav Indane Gas Service</h5>
-            <p class="exp-date">1 Year, 10 Months</p>
-            <ul>
-              <li>Inventory tracking and performance report generation.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Certification Section -->
-  <section id="certifications" class="content-section py-5 ">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">My Certifications</h2>
-        <p class="section-subtitle">A showcase of my verified knowledge and achievements.</p>
-      </div>
-      <div class="row gy-4">
-        <!-- Certification 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cert-card p-4 h-100">
-            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>Data Analytics</h5>
-            <p class="cert-org">Simplilearn|SkillUp</p>
-            <p class="cert-date">Issued: March 2025</p>
-            <p class="cert-date">Certificate Code: 818277</p>
-            <a href="#" class="cert-link" target="_blank">View Certificate</a>
-          </div>
-        </div>
-        <!-- Certification 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cert-card p-4 h-100">
-            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>Cyber Security</h5>
-            <p class="cert-org">Simplilearn|SkillUp</p>
-            <p class="cert-date">Issued: Feb 2025</p>
-            <a href="#" class="cert-link" target="_blank">View Certificate</a>
-          </div>
-        </div>
-        <!-- Certification 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cert-card p-4 h-100">
-            <h5 class="cert-title"><i class="fas fa-certificate me-2 text-success"></i>SQL </h5>
-            <p class="cert-org">Simplilearn|SkillUp</p>
-            <p class="cert-date">Issued: Mar 2024</p>
-            <a href="#" class="cert-link" target="_blank">View Certificate</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-
-  <!-- Qualification Section -->
-<section id="qualifications" class="content-section py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="section-title">My Qualifications</h2>
-        <p class="section-subtitle">Academic journey and educational background.</p>
-      </div>
-  
-      <div class="row gy-4">
-        <!-- Qualification 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cert-card p-4 h-100">
-            <h5 class="cert-title"><i class="fas fa-graduation-cap me-2 text-success"></i>Master of Computer Applications (MCA)</h5>
-            <p class="cert-org">SPU Mandi (H.P.)</p>
-            <p class="cert-date">2024 – Present</p>
-            <p class="cert-date"></p>
-          </div>
-        </div>
-  
-        <!-- Qualification 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="cert-card p-4 h-100">
-            <h5 class="cert-title"><i class="fas fa-graduation-cap me-2 text-success"></i>Bachelor of Computer Applications (BCA)</h5>
-            <p class="cert-org">HPU (ICDEOL)</p>
-            <p class="cert-date">2016 – 2019</p>
-            <p class="cert-date">Final CGPA: 7.46</p>
-          </div>
-        </div>       
-        </div>
-      </div>
+    <div class="card">
+        <p>
+            I'm a passionate <strong>Web Developer</strong> with experience in building
+            dynamic, secure, and responsive websites. I specialize in
+            <strong>PHP, WordPress, MySQL</strong>, and modern UI design using clean,
+            maintainable code.
+        </p>
+        <p>
+            I enjoy solving real-world problems, optimizing performance, and
+            creating intuitive user experiences that feel professional and reliable.
+        </p>
     </div>
-  </section>
-  
-  
-  <!-- JavaScript: Show Selected Section -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const buttons = document.querySelectorAll('.btn-explore');
-      const sections = document.querySelectorAll('.content-section');
-  
-      // Hide all sections initially
-      sections.forEach(section => section.style.display = "none");
-  
-      // Add click event to each button
-      buttons.forEach(button => {
-        button.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetID = this.getAttribute('href').substring(1);
-  
-          // Hide all sections
-          sections.forEach(section => section.style.display = "none");
-  
-          // Show the selected section
-          const targetSection = document.getElementById(targetID);
-          if (targetSection) {
-            targetSection.style.display = "block";
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    });
-  </script>
+</section>
 
-<!-- About Section -->
-<section id="about" class="about-section py-5">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="about-title">About Me</h2>
-      </div>
-      <div class="row align-items-center">
-        <!-- Left Side: Image -->
-        <div class="col-md-5 mb-4 mb-md-0 text-center">
-          <img src="Image/Gauravimg.jpg" alt="Gaurav" class="img-fluid rounded shadow" style="max-height: 300px;" />
-        </div>
-  
-        <!-- Right Side: Text & Contact Info -->
-        <div class="col-md-7">
-          <h4 class="about-subtitle">Web Designing Is My Passion</h4>
-          <p class="about-text mb-4">
-            I'm currently pursuing an MCA at SPU Mandi and love solving real-world problems using web technologies. I'm always open to freelance and collaborative opportunities.
-          </p>
-  
-          <!-- Contact Info -->
-          <ul class="list-unstyled mb-4">            
-            <li><i class="fas fa-envelope me-2 text-danger"></i> <strong>Email:</strong> gauravspumca@gmail.com</li>
-            <li><i class="fab fa-github me-2 text-dark"></i> <strong>GitHub:</strong> <a href="https://github.com/Gaurav-Sharma03" target="_blank">Gaurav-Sharma03</a></li>
-            <a href="resume/resume.html" target="_blank" class="btn-hire">Download CV</a>  
-        </ul>  
-         
-          
-        </div>
-      </div>
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+    <div class="section-header">
+        <h2>Skills</h2>
+        <p>Technologies and tools I work with regularly.</p>
     </div>
-  </section> 
 
-    
+    <div class="projects-grid">
 
-    <!-- Footer -->
-    <footer class="text-white text-center py-3">
-        <p>&copy; 2025 Gaurav. All rights reserved.</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="https://facebook.com" class="text-white"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" class="text-white"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com" class="text-white"><i class="fab fa-github"></i></a>
+        <div class="card">
+            <h3>Frontend</h3>
+            <p>HTML5, CSS3, JavaScript, Responsive Design, UI/UX</p>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="card">
+            <h3>Backend</h3>
+            <p>PHP, OOP, MVC, REST APIs, Authentication</p>
+        </div>
+
+        <div class="card">
+            <h3>Database & CMS</h3>
+            <p>MySQL, WordPress, Custom Themes & Plugins</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+    <div class="section-header">
+        <h2>Projects</h2>
+        <p>Some of my recent work showcasing real-world development skills.</p>
+    </div>
+
+    <div class="projects-grid">
+
+        <div class="card project-card">
+            <h3>ERP Management System</h3>
+            <p>
+                Role-based ERP system with authentication, company-wise data
+                handling, and secure PHP backend.
+            </p>
+            <span class="tech">PHP · MySQL · OOP · Security</span>
+        </div>
+
+        <div class="card project-card">
+            <h3>WordPress Security Plugin</h3>
+            <p>
+                Custom plugin to protect against brute-force attacks and
+                improve WordPress security.
+            </p>
+            <span class="tech">WordPress · PHP · Security</span>
+        </div>
+
+        <div class="card project-card">
+            <h3>Portfolio Website</h3>
+            <p>
+                Fully responsive, UI/UX-focused portfolio using custom CSS
+                and modern design principles.
+            </p>
+            <span class="tech">HTML · CSS · UI/UX</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section" id="education">
+    <div class="section-header">
+        <h2>Education</h2>
+        <p>My academic background and learning journey.</p>
+    </div>
+
+    <div class="education-list">
+
+        <div class="card education-card">
+            <h3>Bachelor of Computer Science</h3>
+            <p class="edu-meta">University / College Name · 2021 – 2024</p>
+            <p>
+                Focused on Data Structures, Algorithms, Databases,
+                Operating Systems, and Web Development.
+            </p>
+        </div>
+
+        <div class="card education-card">
+            <h3>Higher Secondary (Science)</h3>
+            <p class="edu-meta">Board Name · 2019 – 2021</p>
+            <p>
+                Built a strong foundation in Mathematics and Computer Science.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+    <div class="section-header">
+        <h2>Contact</h2>
+        <p>Let’s work together or discuss your next project.</p>
+    </div>
+
+    <div class="card">
+        <p><strong>Email:</strong> yourname@email.com</p>
+        <p><strong>Location:</strong> India</p>
+        <p>
+            Feel free to reach out for freelance work, collaboration,
+            or full-time opportunities.
+        </p>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h2>Gaurav</h2>
+            <p>Web Developer | PHP | WordPress | UI/UX</p>
+        </div>
+
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Gaurav. All Rights Reserved.</p>
+    </div>
+</footer>
+
 </body>
-
 </html>
