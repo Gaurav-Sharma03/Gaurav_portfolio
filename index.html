@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -52,135 +52,314 @@
 </section>
 
 <!-- ===== ABOUT ===== -->
-<section class="section" id="about">
-    <div class="section-header">
-        <h2>About Me</h2>
-        <p>A brief introduction about who I am and what I do.</p>
-    </div>
+<section class="section about" id="about">
+    <div class="about-container">
 
-    <div class="card">
-        <p>
-            I'm a passionate <strong>Web Developer</strong> with experience in building
-            dynamic, secure, and responsive websites. I specialize in
-            <strong>PHP, WordPress, MySQL</strong>, and modern UI design using clean,
-            maintainable code.
-        </p>
-        <p>
-            I enjoy solving real-world problems, optimizing performance, and
-            creating intuitive user experiences that feel professional and reliable.
-        </p>
+        <div class="section-header">
+            <span class="section-tag">Introduction</span>
+            <h2>About Me</h2>
+            <p>
+                A short overview of my background, expertise, and what drives me as a developer.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <!-- Left Content -->
+            <div class="about-content card">
+                <h3>Web Developer & Problem Solver</h3>
+                <p>
+                    I am a dedicated <strong>Web Developer</strong> with hands-on experience
+                    building secure, scalable, and performance-focused web applications.
+                    My core expertise lies in <strong>PHP, WordPress, and MySQL</strong>,
+                    combined with modern UI/UX principles.
+                </p>
+                <p>
+                    I focus on writing clean, maintainable code and crafting interfaces
+                    that are intuitive, accessible, and visually balanced.
+                    I enjoy transforming complex requirements into simple,
+                    effective digital solutions.
+                </p>
+            </div>
+
+            <!-- Right Highlights -->
+            <div class="about-highlights">
+
+                <div class="highlight card">
+                    <i class="fas fa-code"></i>
+                    <h4>Clean Code</h4>
+                    <p>Maintainable, secure, and scalable development practices.</p>
+                </div>
+
+                <div class="highlight card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Security Focused</h4>
+                    <p>Experience with authentication, data protection, and best practices.</p>
+                </div>
+
+                <div class="highlight card">
+                    <i class="fas fa-layer-group"></i>
+                    <h4>UI/UX Mindset</h4>
+                    <p>Designing interfaces that are intuitive and user-centered.</p>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <!-- ===== SKILLS ===== -->
-<section class="section" id="skills">
-    <div class="section-header">
-        <h2>Skills</h2>
-        <p>Technologies and tools I work with regularly.</p>
-    </div>
+<!-- ===== SKILLS ===== -->
+<section class="section skills" id="skills">
+    <div class="skills-container">
 
-    <div class="projects-grid">
-
-        <div class="card">
-            <h3>Frontend</h3>
-            <p>HTML5, CSS3, JavaScript, Responsive Design, UI/UX</p>
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fas fa-layer-group"></i> Expertise
+            </span>
+            <h2>Skills & Technologies</h2>
+            <p>
+                Technologies, frameworks, and tools I use to design and build
+                high-quality, scalable web applications.
+            </p>
         </div>
 
-        <div class="card">
-            <h3>Backend</h3>
-            <p>PHP, OOP, MVC, REST APIs, Authentication</p>
-        </div>
+        <div class="skills-grid">
 
-        <div class="card">
-            <h3>Database & CMS</h3>
-            <p>MySQL, WordPress, Custom Themes & Plugins</p>
-        </div>
+            <!-- Frontend -->
+            <div class="skill-card card">
+                <div class="skill-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                </div>
 
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> HTML5 & Semantic Markup</li>
+                    <li><i class="fas fa-check-circle"></i> CSS3, Flexbox & Grid</li>
+                    <li><i class="fas fa-check-circle"></i> JavaScript (ES6+)</li>
+                    <li><i class="fas fa-check-circle"></i> Responsive & UI/UX Design</li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-card card">
+                <div class="skill-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                </div>
+
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> PHP (OOP & MVC)</li>
+                    <li><i class="fas fa-check-circle"></i> RESTful APIs</li>
+                    <li><i class="fas fa-check-circle"></i> Authentication & Security</li>
+                    <li><i class="fas fa-check-circle"></i> Application Architecture</li>
+                </ul>
+            </div>
+
+            <!-- Database & CMS -->
+            <div class="skill-card card">
+                <div class="skill-header">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & CMS</h3>
+                </div>
+
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> MySQL & Query Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> WordPress Development</li>
+                    <li><i class="fas fa-check-circle"></i> Custom Themes & Plugins</li>
+                    <li><i class="fas fa-check-circle"></i> Performance Optimization</li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 </section>
+
 
 <!-- ===== PROJECTS ===== -->
-<section class="section" id="projects">
-    <div class="section-header">
-        <h2>Projects</h2>
-        <p>Some of my recent work showcasing real-world development skills.</p>
-    </div>
+<section class="section projects" id="projects">
+    <div class="projects-container">
 
-    <div class="projects-grid">
-
-        <div class="card project-card">
-            <h3>ERP Management System</h3>
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fas fa-briefcase"></i> Work
+            </span>
+            <h2>Selected Projects</h2>
             <p>
-                Role-based ERP system with authentication, company-wise data
-                handling, and secure PHP backend.
+                Real-world projects demonstrating my ability to design,
+                develop, and secure modern web applications.
             </p>
-            <span class="tech">PHP · MySQL · OOP · Security</span>
         </div>
 
-        <div class="card project-card">
-            <h3>WordPress Security Plugin</h3>
-            <p>
-                Custom plugin to protect against brute-force attacks and
-                improve WordPress security.
-            </p>
-            <span class="tech">WordPress · PHP · Security</span>
-        </div>
+        <div class="projects-grid">
 
-        <div class="card project-card">
-            <h3>Portfolio Website</h3>
-            <p>
-                Fully responsive, UI/UX-focused portfolio using custom CSS
-                and modern design principles.
-            </p>
-            <span class="tech">HTML · CSS · UI/UX</span>
-        </div>
+            <!-- Project 1 -->
+            <article class="project-card card">
+                <div class="project-header">
+                    <i class="fas fa-building"></i>
+                    <h3>ERP Management System</h3>
+                </div>
 
+                <p>
+                    A role-based ERP platform featuring secure authentication,
+                    company-wise data segregation, and scalable PHP architecture.
+                </p>
+
+                <div class="project-tech">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>OOP</span>
+                    <span>Security</span>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card card">
+                <div class="project-header">
+                    <i class="fab fa-wordpress"></i>
+                    <h3>WordPress Security Plugin</h3>
+                </div>
+
+                <p>
+                    A custom WordPress plugin designed to prevent brute-force
+                    attacks, sanitize inputs, and harden login security.
+                </p>
+
+                <div class="project-tech">
+                    <span>WordPress</span>
+                    <span>PHP</span>
+                    <span>Security</span>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card card">
+                <div class="project-header">
+                    <i class="fas fa-palette"></i>
+                    <h3>Developer Portfolio</h3>
+                </div>
+
+                <p>
+                    A performance-optimized, UI/UX-focused portfolio built
+                    using custom CSS, animations, and modern design principles.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>UI/UX</span>
+                </div>
+            </article>
+
+        </div>
     </div>
 </section>
 
+
 <!-- ===== EDUCATION ===== -->
-<section class="section" id="education">
-    <div class="section-header">
-        <h2>Education</h2>
-        <p>My academic background and learning journey.</p>
-    </div>
+<section class="section education" id="education">
+    <div class="education-container">
 
-    <div class="education-list">
-
-        <div class="card education-card">
-            <h3>Bachelor of Computer Science</h3>
-            <p class="edu-meta">University / College Name · 2021 – 2024</p>
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fas fa-graduation-cap"></i> Education
+            </span>
+            <h2>Academic Background</h2>
             <p>
-                Focused on Data Structures, Algorithms, Databases,
-                Operating Systems, and Web Development.
+                My formal education and foundational learning in computer science
+                and software development.
             </p>
         </div>
 
-        <div class="card education-card">
-            <h3>Higher Secondary (Science)</h3>
-            <p class="edu-meta">Board Name · 2019 – 2021</p>
-            <p>
-                Built a strong foundation in Mathematics and Computer Science.
-            </p>
-        </div>
+        <div class="education-timeline">
 
+            <!-- Degree -->
+            <div class="education-item card">
+                <div class="edu-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+
+                <div class="edu-content">
+                    <h3>Bachelor of Computer Science</h3>
+                    <span class="edu-meta">University / College Name · 2021 – 2024</span>
+                    <p>
+                        Specialized in Data Structures, Algorithms, Databases,
+                        Operating Systems, and Web Development with a strong
+                        focus on practical implementation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- School -->
+            <div class="education-item card">
+                <div class="edu-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+
+                <div class="edu-content">
+                    <h3>Higher Secondary (Science)</h3>
+                    <span class="edu-meta">Board Name · 2019 – 2021</span>
+                    <p>
+                        Built a strong academic foundation in Mathematics,
+                        Computer Science, and analytical problem-solving.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
-<section class="section" id="contact">
-    <div class="section-header">
-        <h2>Contact</h2>
-        <p>Let’s work together or discuss your next project.</p>
-    </div>
+<section class="section contact" id="contact">
+    <div class="contact-container">
 
-    <div class="card">
-        <p><strong>Email:</strong> yourname@email.com</p>
-        <p><strong>Location:</strong> India</p>
-        <p>
-            Feel free to reach out for freelance work, collaboration,
-            or full-time opportunities.
-        </p>
+        <div class="section-header">
+            <span class="section-tag">
+                <i class="fas fa-paper-plane"></i> Contact
+            </span>
+            <h2>Let’s Work Together</h2>
+            <p>
+                Have a project in mind or looking for a developer?
+                Feel free to reach out.
+            </p>
+        </div>
+
+        <div class="contact-card card">
+
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <span>Email</span>
+                    <p>yourname@email.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <span>Location</span>
+                    <p>India</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-briefcase"></i>
+                <div>
+                    <span>Availability</span>
+                    <p>Freelance · Full-Time · Remote</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
@@ -188,24 +367,44 @@
 <footer class="footer">
     <div class="footer-container">
 
+        <!-- Brand -->
         <div class="footer-brand">
             <h2>Gaurav</h2>
-            <p>Web Developer | PHP | WordPress | UI/UX</p>
+            <p>
+                Web Developer focused on building secure, scalable,
+                and user-centric web experiences.
+            </p>
         </div>
 
+        <!-- Quick Links -->
+        <nav class="footer-links">
+            <span class="footer-title">Quick Links</span>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- Social -->
         <div class="footer-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <span class="footer-title">Connect</span>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
         </div>
 
     </div>
 
+    <!-- Bottom -->
     <div class="footer-bottom">
         <p>© 2025 Gaurav. All Rights Reserved.</p>
     </div>
 </footer>
+
 
 </body>
 </html>
